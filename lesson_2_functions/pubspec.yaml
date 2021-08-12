@@ -1,0 +1,4 @@
+name: functions
+
+environment:
+  sdk: '>=2.13.4 <3.0.0'

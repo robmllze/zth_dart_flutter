@@ -1,0 +1,3 @@
+name: zth_2_variables_and_operators
+environment:
+  sdk: '>=2.13.4 <3.0.0'
