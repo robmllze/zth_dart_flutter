@@ -20,7 +20,7 @@ This project is part of the *Zero to Hero* tutorial series for Dart and Flutter 
 - %
 - ~/=
 - ^
-- ! (2 uses)
+- ! (3 uses)
 - ? (2 uses)
 - ??
 10. Provide an example of how the following types are converted:
@@ -43,5 +43,7 @@ This project is part of the *Zero to Hero* tutorial series for Dart and Flutter 
 ## References:
 
 * Official Dart documentation on variables and more: https://dart.dev/guides/language/language-tour
-* Wikipedia Integer: https://en.wikipedia.org/wiki/Integer_(computer_science)
-* Wikipedia Flutter: https://en.wikipedia.org/wiki/Single-precision_floating-point_format
+* Official Dart documentation on null safety: https://dart.dev/null-safety/understanding-null-safety
+* Integer: https://en.wikipedia.org/wiki/Integer_(computer_science)
+* Float: https://en.wikipedia.org/wiki/Single-precision_floating-point_format
+* Bitwise Operations: https://en.wikipedia.org/wiki/Bitwise_operation
