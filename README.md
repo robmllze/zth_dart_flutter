@@ -25,13 +25,12 @@ This document is intended to use as a reference for this course. See supplementa
         * "Alphabetical Sorter"
         * "Draw∙io Integration"
 * Syntax, Style, Scope and Comments
-* Variables and Operators
-* Null Safety
+* Variables, Operators and Null Safety
 * Functions
-* Short Functions
 * Loops
 * Strings
 * Lists, Sets, Queues and Maps
+* Importing and Exporting
 * Working With DateTime and Timestamp
 * Classes, Interfaces, Enums
 * Iterators
@@ -140,7 +139,7 @@ bin/MY_MAIN_FILE arg1 arg2 arg3 etc
 ### **Jargon**
 
 #### E
-An **expression** is a combination of objects and operators such as `a + 2.0 * b >= pi - 1.0 - "four".length` that evaluates to some value of any type.
+An **expression** is a combination of objects and operators such as `a + 2.0 * b >= pi - 1.0 - "four".length` that evaluates to some type such as a boolean.
 
 #### P
 A **package** or **library** is a set of pre-defined functions, classes, varaibles, etc., that's not directly visible but can be imported to your code.

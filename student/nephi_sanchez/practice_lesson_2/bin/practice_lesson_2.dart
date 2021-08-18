@@ -88,7 +88,7 @@ void main() {
     print("The temperature in your area is $temperatureF degrees F");
   }
 
-  double? temperatureC = fahrenheitToCelcius(temperatureF ?? 0);
+  double? temperatureC = fahrenheitToCelcius(temperatureF ?? 0.0);
 
   if (temperatureC == null) {
     print("The temperature in your area is not availalable at this time.");

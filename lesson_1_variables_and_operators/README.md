@@ -20,8 +20,8 @@ This project is part of the *Zero to Hero* tutorial series for Dart and Flutter 
 - %
 - ~/=
 - ^
-- ! (3 uses)
-- ? (2 uses)
+- ! (4 uses) *** is!, !=, !, !false
+- ? (3 uses)
 - ??
 10. Provide an example of how the following types are converted:
 - **int** to **double**
@@ -32,7 +32,7 @@ This project is part of the *Zero to Hero* tutorial series for Dart and Flutter 
 - **double** to **num**
 - **bool** to **String**
 - **String** to **bool**
-11. When checking for types, the difference between using the keyword **is** vs. the method *.runtimeType()?*
+11. When checking for types, waht is the difference between using the keyword **is** vs. the method *.runtimeType()?*
 12. What's the point of Null safety?
 13. What are bitwise operators?
 14. When should we define variables explicitly/implicitly?

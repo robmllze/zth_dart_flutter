@@ -99,7 +99,7 @@ void main() {
       final a = 4321.toRadixString(2);
       final b = 1234.toRadixString(2);
       final notA = (~4321).toRadixString(2);
-      final aAndB = (4321 & 1234).toRadixString(2);
+      final String aAndB = (4321 & 1234).toRadixString(2);
       final aOrB = (4321 | 1234).toRadixString(2);
       final aXorB = (4321 ^ 1234).toRadixString(2);
       final aLeft4 = (4321 << 4).toRadixString(2);
@@ -193,9 +193,9 @@ void main() {
     {
       final double mark = 50.25;
       String message = "YOU ";
-      if (mark > 50.0) {
+      if (mark < 50.0) {
         message += "FAILED";
-      } else if (mark < 50.0) {
+      } else if (mark > 50.0) {
         message += "PASSED";
       } else {
         message += "JUST MADE IT";
@@ -213,8 +213,12 @@ void main() {
                   : "JUST MADE IT");
       print(message);
     }
+    {
+      Real myReal = 5;
+    }
   }
 }
 
 // Must be global.
 typedef LuckyFn = double? Function(bool);
+typedef Real = num;
