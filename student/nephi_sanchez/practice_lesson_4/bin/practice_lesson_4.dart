@@ -24,17 +24,18 @@ num factorial(final num a) {
   return a * factorial(a - 1);
 }
 
-typedef Computation = num Function(num, num);
+typedef Comp = num Function(num, num);
 
 num computation(
-  Computation computation,
+  Comp comp,
   num a,
   num b,
-) =>
-    computation.call(a, b);
+) {
+  return 100.0 * comp.call(a, b);
+}
 
 void main() {
-  Computation? compute;
+  Comp? compute;
   // compute(1, 2);
   // compute.call(1, 2);
 
@@ -42,11 +43,12 @@ void main() {
 
   print(factorial(5));
 
-  print(factorial.runtimeType == Computation);
-  print(factorial is Computation);
-  print(avg2 is Computation);
+  print(factorial.runtimeType == Comp);
+  print(factorial is Comp);
+  print(avg2 is Comp);
 
   computation(avg2, 1, 2);
+  avg2(1, 2);
   computation(div, 1, 2);
   computation(largest2, 1, 2);
   computation(smallest2, 1, 2);

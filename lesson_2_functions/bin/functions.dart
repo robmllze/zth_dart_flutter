@@ -47,6 +47,14 @@ double calcAverageA(
   return (a + b + c + d) / 4.0;
 }
 
+double calcAverage(List<double> values) {
+  double sum = 0.0;
+  for (double value in values) {
+    sum += value;
+  }
+  return sum / values.length;
+}
+
 /// Calculates the area of a trapezium.
 ///
 /// Please see: https://brilliant.org/wiki/area-of-a-trapezium/
@@ -58,7 +66,7 @@ num calcAreaTrapezium({
   return (a + b) / 2.0 * h;
 }
 
-/// Impractical.
+/// Impractical, and prone to error.
 double calcAverageB({
   required double a,
   double? b,
@@ -94,6 +102,10 @@ class MyBasicCalculations {
   static Computation get rem => (a, b) => (a % b);
 }
 
+void stackOverflow() {
+  stackOverflow();
+}
+
 void main(final List<String> args) {
   print(args);
   //final double difference = subtractBad(true, 5); // Runtime error.
@@ -118,9 +130,10 @@ void main(final List<String> args) {
   print(calcAverageA(1, 2, 3));
   print(calcAverageA(1, 2, 3, 4));
   //calcAverageA(1, 2, 3, 4, 5); // Compilation error
-  print(calcAreaTrapezium(a: 2, b: 6, h: 1.5).toDouble()); // Sensible.
+  print(calcAreaTrapezium(b: 6, a: 2, h: 1.5).toDouble()); // Sensible.
   print(calcAverageB(a: 1, b: 2, c: 3, d: 4)); // Impractical.
   MyBasicCalculations.add().call(1, 2);
   MyBasicCalculations.divide.call(1, 2);
   MyBasicCalculations.divide(1, 2);
+  calcAverage([1, 2, 3, 4]);
 }
