@@ -79,7 +79,7 @@ double calcAverageB({
   return (a + b + c + d) / 4.0;
 }
 
-typedef Computation = double Function(double, double);
+typedef Computation = double Function(double, double); // Alias
 
 /// Performs a `computation` on two numbers `a` and `b`.
 double compute(
@@ -92,7 +92,7 @@ double compute(
 // Functions can be grouped with a class.
 class MyBasicCalculations {
   //static get add => add; // Stack-Overflow error.
-  static Computation add() => (a, b) => a + b;
+  static double Function(double, double) add() => (a, b) => a + b;
   static Computation subract() => (a, b) => a - b;
   static Computation multiply() => (a, b) => a * b;
   // More on getters and setters later...
@@ -136,4 +136,5 @@ void main(final List<String> args) {
   MyBasicCalculations.divide.call(1, 2);
   MyBasicCalculations.divide(1, 2);
   calcAverage([1, 2, 3, 4]);
+  //print(MyBasicCalculations.add()(12, 2));
 }
