@@ -106,35 +106,52 @@ void stackOverflow() {
   stackOverflow();
 }
 
+List<num> sortAsc1(List<num> values) {
+  List<num> res = [];
+  while (values.length != 0) {
+    int indexMin = 0;
+    num min = values[0];
+    for (int i = 1; i < values.length; i++) {
+      if (values[i] < min) {
+        min = values[i];
+        indexMin = i;
+      }
+    }
+    values.removeAt(indexMin);
+    res.add(min);
+  }
+  return res;
+}
+
 void main(final List<String> args) {
-  print(args);
-  //final double difference = subtractBad(true, 5); // Runtime error.
-  final double sum = add(11, 22);
-  final String formatted0 = format(sum);
-  final String formatted1 = format(subtract(11, 22));
-  Function calculate = (double a, double b) => a % b;
-  print(calculate(33, 10));
-  calculate = add;
-  double result = calculate(33, 10);
-  print(result);
-  calculate = subtract;
-  print(calculate(33, 10));
-  print(() => "An anonymous or 'Lambda' function that returns a string");
-  final a = 99, b = 77;
-  final largest0 = a > b ? a : b;
-  final largest1 = ((a, b) => a > b ? a : b).call(99, 77); // Impractical
-  final average = compute((a, b) => (a + b) / 2, 10, 50); // Practical
-  print(average);
-  print(calcAverageA(1));
-  print(calcAverageA(1, 2));
-  print(calcAverageA(1, 2, 3));
-  print(calcAverageA(1, 2, 3, 4));
-  //calcAverageA(1, 2, 3, 4, 5); // Compilation error
-  print(calcAreaTrapezium(b: 6, a: 2, h: 1.5).toDouble()); // Sensible.
-  print(calcAverageB(a: 1, b: 2, c: 3, d: 4)); // Impractical.
-  MyBasicCalculations.add().call(1, 2);
-  MyBasicCalculations.divide.call(1, 2);
-  MyBasicCalculations.divide(1, 2);
-  calcAverage([1, 2, 3, 4]);
-  //print(MyBasicCalculations.add()(12, 2));
+  // print(args);
+  // //final double difference = subtractBad(true, 5); // Runtime error.
+  // final double sum = add(11, 22);
+  // final String formatted0 = format(sum);
+  // final String formatted1 = format(subtract(11, 22));
+  // Function calculate = (double a, double b) => a % b;
+  // print(calculate(33, 10));
+  // calculate = add;
+  // double result = calculate(33, 10);
+  // print(result);
+  // calculate = subtract;
+  // print(calculate(33, 10));
+  // print(() => "An anonymous or 'Lambda' function that returns a string");
+  // final a = 99, b = 77;
+  // final largest0 = a > b ? a : b;
+  // final largest1 = ((a, b) => a > b ? a : b).call(99, 77); // Impractical
+  // final average = compute((a, b) => (a + b) / 2, 10, 50); // Practical
+  // print(average);
+  // print(calcAverageA(1));
+  // print(calcAverageA(1, 2));
+  // print(calcAverageA(1, 2, 3));
+  // print(calcAverageA(1, 2, 3, 4));
+  // //calcAverageA(1, 2, 3, 4, 5); // Compilation error
+  // print(calcAreaTrapezium(b: 6, a: 2, h: 1.5).toDouble()); // Sensible.
+  // print(calcAverageB(a: 1, b: 2, c: 3, d: 4)); // Impractical.
+  // MyBasicCalculations.add().call(1, 2);
+  // MyBasicCalculations.divide.call(1, 2);
+  // MyBasicCalculations.divide(1, 2);
+  // calcAverage([1, 2, 3, 4]);
+  // //print(MyBasicCalculations.add()(12, 2));
 }

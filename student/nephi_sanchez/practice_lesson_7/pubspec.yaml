@@ -1,0 +1,11 @@
+name: practice_lesson_7
+description: This is lesson number 7
+version: 1.0.0
+
+environment:
+  sdk: '>=2.13.4 <3.0.0'
+
+# dependencies:
+
+dev_dependencies:
+  lints: ^1.0.1
