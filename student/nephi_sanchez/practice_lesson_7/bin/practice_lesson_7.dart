@@ -1,6 +1,6 @@
 // Control Flow
 
-num findSmallest(List<num> values) {
+num findSmallest(final List<num> values) {
   num min = values[0];
   for (int i = 1; i < values.length; i++) {
     if (values[i] < min) {
@@ -10,7 +10,7 @@ num findSmallest(List<num> values) {
   return min;
 }
 
-List<num> sortAsc1(List<num> values) {
+List<num> sortAsc1(final List<num> values) {
   List<num> res = [];
   while (values.isNotEmpty) {
     int indexMin = 0;
@@ -27,6 +27,18 @@ List<num> sortAsc1(List<num> values) {
   return res;
 }
 
+// List<num> sortAsc0(List<num> values) {
+//   // bool swapped = true;
+//   // while (swapped) {
+
+//   // }
+
+//   for (int i = 1; i < values.length; i++) {
+//     int a, b;
+//     if (i == values.length - 1) {}
+//   }
+// }
+
 // List<num> sortAsc(List<num> values) {
 //   List<num> newList = [];
 //   int target = values.length;
@@ -39,7 +51,7 @@ List<num> sortAsc1(List<num> values) {
 // }
 
 void main() {
-  int counter = 0;
+  // int counter = 0;
   // while (counter++ < 10) {
   //   print(counter);
   // }
@@ -47,7 +59,7 @@ void main() {
   //   print(counter);
   // }
   // counter = 0;
-  // for (; counter++ < 10;) {
+  // for (;counter++ < 10;) {
   //   print(counter);
   // }
 
@@ -62,11 +74,12 @@ void main() {
   //   print(counter);
   // } while (counter < 10);
 
-  // List<int> myInts = [1, 2, 3, 4, 5, 6];
-  // List<int> myIntsReversed = myInts.reversed.toList();
-  // //print(myInts.length);
+  List<int> myInts = [1, 2, 3, 4, 5, 6];
+  List<int> myIntsReversed = myInts.reversed.toList();
+  Iterable<int> myIntsReversedIt = myInts.reversed;
+  //print(myInts.length);
 
-  // print(findLargest(myInts));
+  print(findSmallest(myInts));
 
   final _scores = [33, 52, 14, 2, 5, 99, 445, 12, 213];
   print(sortAsc1([33, 52, 14, 2, 5, 99, 445, 12, 213]));
@@ -75,7 +88,7 @@ void main() {
   var sorted2 = () {
     _scores.sort();
     return _scores.reversed.toList();
-  }();
+  }.call();
 
   print(sorted2);
 
@@ -129,7 +142,7 @@ void main() {
 
   // for (;;) { print("x"); }
 
-  [1, 2, 3, 4, 5, 6, 7].forEach((el) {
+  [1, 2, 3, 4, 5, 6, 7].forEach((int el) {
     print(el);
   });
 }
