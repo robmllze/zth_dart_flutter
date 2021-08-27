@@ -59,7 +59,7 @@ List<num> sortNewSort(final List<num> values) {
   while (copy.isNotEmpty) {
     final List<num> min = findMax(copy);
     res.add(min.first);
-    copy.removeAt(min.last.toInt());
+    copy.removeAt(min.last as int);
   }
   return res;
 }
