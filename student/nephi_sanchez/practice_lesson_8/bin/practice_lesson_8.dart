@@ -1,3 +1,5 @@
+import 'dart:math';
+
 List<int> incrementEvensExternal(final List<int> values) {
   List<int> resolved = [];
   for (final value in values) {
@@ -128,4 +130,49 @@ void main() {
   for (final it = temperatures.iterator; it.moveNext();) {
     print("Current = " + it.current.toString());
   }
+
+  print("Compare 5 to 6: ${5.compareTo(6)}");
+  print("Compare 6 to 5: ${6.compareTo(5)}");
+
+  // Quick sorting (ascending):
+  final _ascending0 = [5, 4, 1, 7, 8, 10]
+    ..sort((int a, int b) => a.compareTo(b));
+
+  final _ascending1 = [5, 4, 1, 7, 8, 10]
+    ..sort((int a, int b) => a > b ? 1 : -1);
+
+  print(_ascending0);
+  print(_ascending1);
+
+  // Quick descending (ascending):
+  final _descending0 = [5, 4, 1, 7, 8, 10]
+    ..sort((int a, int b) => b.compareTo(a));
+
+  final _descending1 = [5, 4, 1, 7, 8, 10]
+    ..sort((int a, int b) => a <= b ? 1 : -1);
+
+  print(_descending0);
+  print(_descending1);
+
+  fmtPrint(fmtEnglish);
+  fmtPrint(fmtSpanish);
+  fmtPrint(fmtAfrikaans);
+  fmtPrint((double a, double b) => "$a and $b");
+}
+
+void fmtPrint(String Function(double, double) fmt) {
+  String output = "fmtPrint: " + fmt(e, pi);
+  print(output);
+}
+
+String fmtEnglish(double a, double b) {
+  return "The first number is $a and second $b";
+}
+
+String fmtSpanish(double a, double b) {
+  return "El primer numero es $a y el sedgundo es $b";
+}
+
+String fmtAfrikaans(double a, double b) {
+  return "Die eerste nommer is $a en die tweede $b";
 }

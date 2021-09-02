@@ -1,0 +1,19 @@
+# To install: dart pub add --dev lints
+# See: https://dart.dev/guides/language/analysis-options
+
+include: package:lints/recommended.yaml
+
+analyzer:
+  exclude: [build/**]
+  language:
+    strict-raw-types: true
+  strong-mode:
+    implicit-casts: false
+  errors:
+    constant_identifier_names: ignore
+    non_constant_identifier_names: ignore
+    unused_local_variable: ignore
+linter:
+  rules:
+    - cancel_subscriptions
+
