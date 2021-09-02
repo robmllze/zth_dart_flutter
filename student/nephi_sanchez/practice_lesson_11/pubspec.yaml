@@ -1,0 +1,9 @@
+name: practice_lesson_11
+version: 1.0.0
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+dev_dependencies:
+  lints: ^1.0.1
+dependencies:
+  uuid: ^3.0.4 # https://pub.dev/packages/uuid/install
+
