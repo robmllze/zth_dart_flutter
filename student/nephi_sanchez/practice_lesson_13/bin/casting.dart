@@ -12,8 +12,7 @@ void main() {
 
   // Use the ".cast()" for "sideways" casting.
   // Note: This can cause a runtime error if used incorrectly.
-  final data1 = dataRaw.cast<String,
-      dynamic>(); // error, incompatible types for "up" or "down" casting
+  final data1 = dataRaw.cast<String, dynamic>();
   final Map<String, dynamic> data2 = dataRaw.cast();
   print(data1);
   print(data2);

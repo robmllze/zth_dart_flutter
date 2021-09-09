@@ -1,0 +1,13 @@
+# TODO: Add lints to pubspec.yaml under dev_dependencies or run: dart pub add --dev lints
+# See: https://dart.dev/guides/language/analysis-options
+
+include: package:lints/recommended.yaml
+analyzer:
+  language:
+    strict-raw-types: true
+  strong-mode:
+    implicit-casts: false
+  errors:
+    constant_identifier_names: ignore
+    camel_case_extensions: ignore
+    unnecessary_this: ignore

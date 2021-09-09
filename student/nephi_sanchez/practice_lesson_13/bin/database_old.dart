@@ -94,22 +94,26 @@ bool deleteUser(String uuid) {
 
 // userExistence()
 // updateUserData()
-bool updateUserData({
+bool updateUser({
   required String uuid,
   String? name,
   int? age,
   String? occupation,
 }) {
   if (_checkUsers()) {
-    final users = (_db["users"] as Map).cast<String, dynamic>();
+    final users =
+        (_db["users"] as Map<String, dynamic>).cast<String, dynamic>();
     if (users.containsKey(uuid)) {
       final user = (users[uuid] as Map).cast<String, dynamic>();
       if (name != null) user["name"] = name;
       if (age != null) user["age"] = age;
       if (occupation != null) user["occupation"] = occupation;
+      // These two lines could be redundant:
       users[uuid] = user;
       _db["users"] = users;
       return true;
+    } else {
+      newUser(name: name!, age: age, occupation: occupation);
     }
   }
   return false;
