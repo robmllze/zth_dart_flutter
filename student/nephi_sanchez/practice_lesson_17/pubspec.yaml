@@ -1,0 +1,8 @@
+name: practice_lesson_17
+version: 1.0.0
+environment:
+  sdk: '>=2.12.0 <3.0.0'
+dependencies:
+  uuid: ^3.0.4 # https://pub.dev/packages/uuid/install
+dev_dependencies: 
+  lints: ^1.0.1 
