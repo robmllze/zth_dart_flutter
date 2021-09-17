@@ -80,3 +80,5 @@ class Address {
 void printAddress(Address address) {
   print(address.toMap());
 }
+
+const PI = 3.1416;

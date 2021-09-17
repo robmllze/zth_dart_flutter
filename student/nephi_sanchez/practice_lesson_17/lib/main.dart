@@ -34,11 +34,12 @@ void main() {
     nameFirst: "Nephi",
     nameLast: "Sanchez",
     address: Address(
-        streetLine1: "820 Lacy Ln.",
-        streetLine2: "Apt 1",
-        city: "Las Vegas",
-        postCode: "89107",
-        country: "USA"),
+      streetLine1: "820 Lacy Ln.",
+      streetLine2: "Apt 1",
+      city: "Las Vegas",
+      postCode: "89107",
+      country: "USA",
+    ),
   );
   // print(user0.toMap());
 

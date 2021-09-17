@@ -8,13 +8,13 @@
 //
 // -----------------------------------------------------------------------------
 
-import 'address.dart';
+import 'address.dart' as my_address_library;
 
 class User {
   final String id, nameFirst, nameLast;
   final int? age;
   final double? weightLb;
-  final Address? address;
+  final my_address_library.Address? address;
   User({
     required this.id,
     required this.nameFirst,
@@ -25,6 +25,7 @@ class User {
   });
   Map<String, dynamic> toMap() => {
         this.id: {
+          "pi": my_address_library.PI,
           "name_first": this.nameFirst,
           "name_last": this.nameLast,
           if (age != null) "age": age,
