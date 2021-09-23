@@ -1,5 +1,5 @@
 mixin Properties {
-  int heightFt = 6;
+  late int heightFt;
   int heightIn = 1;
   double weightLb = 210.0;
   double weightAsKg() => 0.45 * weightLb;
@@ -9,8 +9,8 @@ mixin Properties {
 
 class PersonType1 with Properties {
   //
-  PersonType1() {
-    this.heightFt = 5;
+  PersonType1({required int heightFt}) {
+    this.heightFt = heightFt;
   }
 }
 
@@ -34,6 +34,6 @@ class MyCustomer with DbPropertiesBase {}
 class MyAdmin with DbPropertiesBase, DbPropertiesAdmin {}
 
 void main() {
-  var p1 = PersonType1();
+  var p1 = PersonType1(heightFt: 5);
   p1.heightFt = 5;
 }
