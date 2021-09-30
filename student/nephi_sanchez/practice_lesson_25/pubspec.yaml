@@ -1,0 +1,16 @@
+name: practice_lesson_25
+description: Our first Flutter app.
+publish_to: none
+version: 0.1.0
+environment:
+  # Minimum Dart version compatibility.
+  sdk: ">=2.12.0 <3.0.0"
+# For Debug and Release mode.
+dependencies:
+  flutter:
+    sdk: flutter
+# For Debug mode.
+dev_dependencies:
+  flutter_lints: ^1.0.0
+flutter:
+  uses-material-design: true
