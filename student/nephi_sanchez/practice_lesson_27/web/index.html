@@ -1,0 +1,50 @@
+<!--------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+
+TITLE
+
+---------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------->
+
+<!DOCTYPE html>
+<html>
+
+<!-- HEAD -->
+
+<head>
+  <base href="$FLUTTER_BASE_HREF">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+
+  <!-- DESCRIPTION -->
+  <meta name="description" content="This is my app">
+
+  <!-- iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Lesson 26">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- FAVICON -->
+  <link rel="icon" type="image/png" href="icons/Icon-192.png" />
+
+  <!-- TITLE -->
+  <title>Lesson 26</title>
+
+  <link rel="manifest" href="manifest.json">
+</head>
+
+<!-- BODY WITH BACKGROUND COLOR -->
+
+<body style="background-color: black">
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("flutter-first-frame", function () {
+        navigator.serviceWorker.register("flutter_service_worker.js");
+      });
+    }
+  </script>
+  <script src="main.dart.js?version=0.1.0" type="application/javascript"></script>
+</body>
+
+</html>
