@@ -1,0 +1,15 @@
+name: practice_lesson_28
+description: This is lesson 28
+publish_to: 'none'
+version: 1.0.0+1
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.4 # https://pub.dev/packages/flutter_lints
+flutter:
+  uses-material-design: true
