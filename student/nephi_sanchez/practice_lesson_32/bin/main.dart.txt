@@ -1,0 +1,29 @@
+import 'dart:async';
+import 'dart:io';
+
+Future<String> waitFor3SecondsThenDone0() async {
+  await Future.delayed(Duration(seconds: 3)); // Wait on this line...
+  // ...then move to this line...
+  print("Moved to next line.");
+  return "Dooooone!"; // ...then to this line.
+}
+
+Future<String> waitFor3SecondsThenDone1() {
+  final completer = Completer<String>();
+  Timer(Duration(seconds: 3), () {
+    completer.complete("Dooooone!");
+  });
+  print("Moved to next line.");
+  return completer.future;
+}
+
+void main() async {
+  // final completer = Completer<String>();
+  // print("Enter your name: ");
+  // final name = stdin.readLineSync();
+  // Timer(Duration(seconds: 3), () {
+  //   completer.complete("Hello $name");
+  // });
+  // print(await completer.future);
+  print(await waitFor3SecondsThenDone1());
+}
